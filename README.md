@@ -5,7 +5,7 @@ This repo provides a step-by-step guide on how to run Ubuntu on Windows using WS
 <div class="copy-button">
     <button onclick="copyToClipboard(this)" title="Copy">Copy</button>
     <pre><code>
-    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     </code></pre>
 </div>
 
@@ -25,5 +25,12 @@ This repo provides a step-by-step guide on how to run Ubuntu on Windows using WS
                 console.error('Unable to copy text:', error);
             });
     }
-</script>
 
+    const styleTag = document.createElement('style');
+    styleTag.innerHTML = `
+        .copy-button script {
+            display: none;
+        }
+    `;
+    document.head.appendChild(styleTag);
+</script>
